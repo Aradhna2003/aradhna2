@@ -1,0 +1,15 @@
+keyword_stats.content:
+  path: '/keyword-stats-dbtable' 
+  defaults: 
+    _controller: '\Drupal\keyword_stats\Controller\KeywordStatsDBTable::content' 
+    _title: 'DB table'
+  requirements: 
+    _permission: 'access content' 
+      
+keyword_stats.table:
+  path: '/keyword-stats-table' 
+  defaults: 
+    _controller: '\Drupal\keyword_stats\Controller\KeywordStatsTable::table' 
+    _title: 'Keyword Search TAble'
+  requirements: 
+      _role: authenticated

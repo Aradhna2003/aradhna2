@@ -1,0 +1,6 @@
+name: Keyword Stats
+type: module
+description: Aradhna The keyword_stats is a search count module. Use this module to show the Keyword OR search the Keyword repeatedly counting in a custom database. Display all the data in "/web/keyword_search_table" url at the front page
+package: Custom
+version: 1.0
+core_version_requirement: ^9 || ^10

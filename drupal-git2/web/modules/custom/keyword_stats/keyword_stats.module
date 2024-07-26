@@ -1,0 +1,16 @@
+<?php
+/**
+ * Implements hook_page_attachments_alter().
+ */
+  function keyword_stats_page_attachments_alter(&$variables) {
+    $variables['#attached']['library'][] = 'keyword_stats/keyword_script';
+  }
+
+/**
+ * Implements hook_form_alter().
+ */
+   function keyword_stats_form_alter(&$form, $form_state, $form_id) {
+     if($form_id == 'views_exposed_form'){
+        $form['actions']['submit']['#attributes']['class'][] = 'keyword_stats_button';
+     } 
+   }

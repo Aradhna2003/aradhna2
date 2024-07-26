@@ -1,0 +1,46 @@
+<?php
+use Drupal\Core\Database\Database;
+
+/**
+ * Implements hook_install().
+ */
+function keyword_stats_install() {
+  $schema = [
+    'description' => 'table.',
+    'fields' => [
+      'id' => [
+        'description' => 'Primary identifier for User',
+        'type' => 'serial',
+        'not null' => TRUE,
+      ],
+      'keyword' => [
+        'description' => 'keyword.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ],
+      'count' => [
+        'description' => 'count.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 1,
+      ],
+      'view' => [
+        'description' => 'view.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ],
+    ],
+    'primary key' => ['id'], 
+  ];
+
+  \Drupal::database()->schema()->createTable('keyword_stats', $schema);
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function keyword_stats_uninstall() {
+  \Drupal::database()->schema()->dropTable('keyword_stats');
+}
