@@ -2,18 +2,20 @@
 *
 
 # Except the following files and directories
+!.gitignore
 !composer.lock
-!themes/
-!modules/
+!web/
+!web/themes/
+!web/modules/
 
-# Ignore everything inside themes and modules, except custom directories
-themes/*
-!themes/custom/
-modules/*
-!modules/custom/
+# Ignore everything inside web/themes and web/modules, except custom directories
+web/themes/*
+!web/themes/custom/
+web/modules/*
+!web/modules/custom/
 
 # Ensure we don't ignore subdirectories within custom directories
-themes/custom/*
-!themes/custom/**/
-modules/custom/*
-!modules/custom/**/
+web/themes/custom/*
+!web/themes/custom/**/
+web/modules/custom/*
+!web/modules/custom/**/
