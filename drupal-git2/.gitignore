@@ -2,7 +2,6 @@
 *
 
 # Except the following files and directories
-!.gitignore
 !composer.lock
 !themes/
 !modules/
